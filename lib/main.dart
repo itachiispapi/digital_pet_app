@@ -25,7 +25,7 @@ class _RunMyAppState extends State<RunMyApp> {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       darkTheme: ThemeData.dark(useMaterial3: true),
       themeMode: _themeMode,
@@ -38,17 +38,17 @@ class _RunMyAppState extends State<RunMyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Choose the Theme:'),
+              const Text('Choose the freakin Theme:'),
               const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () => changeTheme(ThemeMode.light),
+                    onPressed: () => changeTheme(ThemeMode.dark),
                     child: const Text('Light'),
                   ),
                   ElevatedButton(
-                    onPressed: () => changeTheme(ThemeMode.dark),
+                    onPressed: () => changeTheme(ThemeMode.light),
                     child: const Text('Dark'),
                   ),
                   ElevatedButton(

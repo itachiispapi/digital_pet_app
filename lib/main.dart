@@ -71,36 +71,6 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-      ),
-      darkTheme: ThemeData.dark(useMaterial3: true),
-      themeMode: _themeMode,
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Theme Demo'), // adding comment here
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text('Choose the freakin Theme:'),
-              const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () => changeTheme(ThemeMode.dark),
-                    child: const Text('Light'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () => changeTheme(ThemeMode.light),
-                    child: const Text('Dark'),
-=======
     final tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
     final bg = [
       Colors.blue[50]!,
@@ -210,7 +180,6 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Button pressed in Tab 3 tab!'),
->>>>>>> 688209ebc220bffff17295307c854ccd17aadd7b
                   ),
                 );
               },

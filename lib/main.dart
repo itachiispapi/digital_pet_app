@@ -25,14 +25,14 @@ class _RunMyAppState extends State<RunMyApp> {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
       ),
       darkTheme: ThemeData.dark(useMaterial3: true),
       themeMode: _themeMode,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Theme Demo'),
+          title: const Text('Theme Demo'), // adding comment here
         ),
         body: Center(
           child: Column(

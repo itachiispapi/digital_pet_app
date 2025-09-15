@@ -32,7 +32,7 @@ class _RunMyAppState extends State<RunMyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Theme Demo'),
+          title: const Text('Theme Demo'), // adding comment here
         ),
         body: Center(
           child: Column(

@@ -25,7 +25,7 @@ class _RunMyAppState extends State<RunMyApp> {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
       ),
       darkTheme: ThemeData.dark(useMaterial3: true),
       themeMode: _themeMode,

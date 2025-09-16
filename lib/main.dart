@@ -32,13 +32,15 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
   late TabController _tabController;
   final RestorableInt tabIndex = RestorableInt(0);
   final TextEditingController _imgUrlController = TextEditingController(
-      text:
-          'https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png');
-  final TextEditingController _captionController =
-      TextEditingController(text: 'Sample caption');
+    text:
+        'https://upload.wikimedia.org/wikipedia/commons/9/9c/Yellow_Labrador_Retriever_2.jpg',
+  );
+  final TextEditingController _captionController = TextEditingController(
+    text: 'Cute Dog',
+  );
   String _imageUrl =
-      'https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png';
-  String _caption = 'Sample caption';
+      'https://upload.wikimedia.org/wikipedia/commons/9/9c/Yellow_Labrador_Retriever_2.jpg';
+  String _caption = 'Cute Dog';
 
   @override
   String get restorationId => 'tab_non_scrollable_demo';
@@ -71,12 +73,12 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
 
   @override
   Widget build(BuildContext context) {
-    final tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
+    final tabs = ['Bugs', 'Dogs', 'Rodents', 'User'];
     final bg = [
       Colors.blue[50]!,
       Colors.green[50]!,
       Colors.amber[50]!,
-      Colors.purple[50]!
+      Colors.purple[50]!,
     ];
     return Scaffold(
       appBar: AppBar(
@@ -108,12 +110,12 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
                       context: context,
                       builder: (ctx) => AlertDialog(
                         title: const Text('Greetings'),
-                        content:
-                            const Text('This is an AlertDialog on Tab 1.'),
+                        content: const Text('This is an AlertDialog on Tab 1.'),
                         actions: [
                           TextButton(
-                              onPressed: () => Navigator.of(ctx).pop(),
-                              child: const Text('OK'))
+                            onPressed: () => Navigator.of(ctx).pop(),
+                            child: const Text('OK'),
+                          ),
                         ],
                       ),
                     );
@@ -130,15 +132,17 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
               children: [
                 TextField(
                   controller: _captionController,
-                  decoration:
-                      const InputDecoration(labelText: 'Caption / Name'),
+                  decoration: const InputDecoration(
+                    labelText: 'Caption / Name',
+                  ),
                   onChanged: (v) => setState(() => _caption = v),
                 ),
                 const SizedBox(height: 12),
                 TextField(
                   controller: _imgUrlController,
-                  decoration:
-                      const InputDecoration(labelText: 'Image URL (network)'),
+                  decoration: const InputDecoration(
+                    labelText: 'Image URL (network)',
+                  ),
                 ),
                 const SizedBox(height: 12),
                 Row(
@@ -178,9 +182,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
             child: ElevatedButton(
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Button pressed in Tab 3 tab!'),
-                  ),
+                  const SnackBar(content: Text('Button pressed in Tab 3 tab!')),
                 );
               },
               child: const Text('Click me'),
@@ -218,25 +220,25 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
               tooltip: 'Tab 1',
               isSelected: _tabController.index == 0,
               onPressed: () => _tabController.animateTo(0),
-              icon: const Icon(Icons.text_fields),
+              icon: const Icon(Icons.pest_control),
             ),
             IconButton(
               tooltip: 'Tab 2',
               isSelected: _tabController.index == 1,
               onPressed: () => _tabController.animateTo(1),
-              icon: const Icon(Icons.image),
+              icon: const Icon(Icons.pets),
             ),
             IconButton(
               tooltip: 'Tab 3',
               isSelected: _tabController.index == 2,
               onPressed: () => _tabController.animateTo(2),
-              icon: const Icon(Icons.touch_app),
+              icon: const Icon(Icons.pest_control_rodent),
             ),
             IconButton(
               tooltip: 'Tab 4',
               isSelected: _tabController.index == 3,
               onPressed: () => _tabController.animateTo(3),
-              icon: const Icon(Icons.list),
+              icon: const Icon(Icons.person),
             ),
           ],
         ),
